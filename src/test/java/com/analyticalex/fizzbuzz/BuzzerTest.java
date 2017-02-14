@@ -179,6 +179,36 @@ public class BuzzerTest {
 	}
 
 	@Test
+	public void print3to3FizzBuzz() {	
+		String[] args = {"3","3"};
+		Buzzer.main(args);
+		String expectedOut = 	"Fizz\n";
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
+	public void print30to30FizzBuzz() {	
+		String[] args = {"3","3"};
+		Buzzer.main(args);
+		String expectedOut = 	"FizzBuzz\n";
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void print19to19FizzBuzz() {	
+		String[] args = {"3","3"};
+		Buzzer.main(args);
+		String expectedOut = 	"19\n";
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
 	public void printErrorStartValGreaterThanEndVal() {	
 		String[] args = {"35","20"};
 		Buzzer.main(args);
