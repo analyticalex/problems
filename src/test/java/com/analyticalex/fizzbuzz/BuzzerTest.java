@@ -130,7 +130,52 @@ public class BuzzerTest {
 								"Buzz\n";
 		String expectedErr = "";
 		assertEquals(expectedOut, outContent.toString());
-		assertEquals(expectedErr,errContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void print7to25FizzBuzz() {	
+		String[] args = {"7","25"};
+		Buzzer.main(args);
+		String expectedOut = 	"7\n" +
+								"8\n" +
+								"Fizz\n" +
+								"Buzz\n" +
+								"11\n" +
+								"Fizz\n" +
+								"13\n" +
+								"14\n" +
+								"FizzBuzz\n" +
+								"16\n" +
+								"17\n" +
+								"Fizz\n" +
+								"19\n" +
+								"Buzz\n" +
+								"Fizz\n" +
+								"22\n" +
+								"23\n" +
+								"Fizz\n" +
+								"Buzz\n";
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
+	public void print77to84FizzBuzz() {	
+		String[] args = {"77","84"};
+		Buzzer.main(args);
+		String expectedOut = 	"77\n" +
+								"Fizz\n" +
+								"79\n" +
+								"Buzz\n" +
+								"Fizz\n" +
+								"82\n" +
+								"83\n" +
+								"Fizz\n";
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
 	}
 	
 	// Clean up print streams to prepare for next test
