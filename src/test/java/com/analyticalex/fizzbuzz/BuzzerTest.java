@@ -198,6 +198,46 @@ public class BuzzerTest {
 		assertEquals(expectedErr, errContent.toString());
 	}
 
+	@Test
+	public void printErrorOneIntArg() {	
+		String[] args = {"30"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: provide both startVal and endVal, or omit arguments to default to 1 and 100.";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
+	public void printErrorMoreThanTwoIntArgs() {	
+		String[] args = {"30","40","101"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: provide only startVal and endVal, or omit arguments to default to 1 and 100.";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
+	public void printErrorNonIntArgs() {	
+		String[] args = {"text","string"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: startVal and endVal must be integers.";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
+	public void printErrorThreeNonIntArgs() {	
+		String[] args = {"true","text","string"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: startVal and endVal must be integers.";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
 	// Clean up print streams to prepare for next test
 	@After
 	public void cleanUpStreams() {
