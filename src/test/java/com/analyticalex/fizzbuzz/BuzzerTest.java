@@ -132,7 +132,7 @@ public class BuzzerTest {
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
-	
+
 	@Test
 	public void print7to25FizzBuzz() {	
 		String[] args = {"7","25"};
@@ -177,7 +177,27 @@ public class BuzzerTest {
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
-	
+
+	@Test
+	public void printErrorStartValGreaterThanEndVal() {	
+		String[] args = {"35","20"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: startVal must be less than or equal to endVal.";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
+	public void printErrorStartValNegative() {	
+		String[] args = {"-2","10"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: startVal must be positive.";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
 	// Clean up print streams to prepare for next test
 	@After
 	public void cleanUpStreams() {
