@@ -16,6 +16,7 @@ public class BuzzerTest {
 	// To enable JUnit tests on Standard Out and Standard Error
 	private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 	private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+	private final String newline = System.lineSeparator();
 
 	// Set up Standard Out and Standard Error print streams before each test
 	@Before
@@ -28,106 +29,106 @@ public class BuzzerTest {
 	public void printFullFizzBuzz() {	
 		String[] args = null;
 		Buzzer.main(args);	
-		String expectedOut = 	"1" + System.lineSeparator() +
-								"2" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"4" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"7" + System.lineSeparator() +
-								"8" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"11" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"13" + System.lineSeparator() +
-								"14" + System.lineSeparator() +
-								"FizzBuzz" + System.lineSeparator() +
-								"16" + System.lineSeparator() +
-								"17" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"19" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"22" + System.lineSeparator() +
-								"23" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"26" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"28" + System.lineSeparator() +
-								"29" + System.lineSeparator() +
-								"FizzBuzz" + System.lineSeparator() +
-								"31" + System.lineSeparator() +
-								"32" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"34" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"37" + System.lineSeparator() +
-								"38" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"41" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"43" + System.lineSeparator() +
-								"44" + System.lineSeparator() +
-								"FizzBuzz" + System.lineSeparator() +
-								"46" + System.lineSeparator() +
-								"47" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"49" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"52" + System.lineSeparator() +
-								"53" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"56" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"58" + System.lineSeparator() +
-								"59" + System.lineSeparator() +
-								"FizzBuzz" + System.lineSeparator() +
-								"61" + System.lineSeparator() +
-								"62" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"64" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"67" + System.lineSeparator() +
-								"68" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"71" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"73" + System.lineSeparator() +
-								"74" + System.lineSeparator() +
-								"FizzBuzz" + System.lineSeparator() +
-								"76" + System.lineSeparator() +
-								"77" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"79" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"82" + System.lineSeparator() +
-								"83" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"86" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"88" + System.lineSeparator() +
-								"89" + System.lineSeparator() +
-								"FizzBuzz" + System.lineSeparator() +
-								"91" + System.lineSeparator() +
-								"92" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"94" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"97" + System.lineSeparator() +
-								"98" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator();
+		String expectedOut = 	"1" + newline +
+								"2" + newline +
+								"Fizz" + newline +
+								"4" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"7" + newline +
+								"8" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline +
+								"11" + newline +
+								"Fizz" + newline +
+								"13" + newline +
+								"14" + newline +
+								"FizzBuzz" + newline +
+								"16" + newline +
+								"17" + newline +
+								"Fizz" + newline +
+								"19" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"22" + newline +
+								"23" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline +
+								"26" + newline +
+								"Fizz" + newline +
+								"28" + newline +
+								"29" + newline +
+								"FizzBuzz" + newline +
+								"31" + newline +
+								"32" + newline +
+								"Fizz" + newline +
+								"34" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"37" + newline +
+								"38" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline +
+								"41" + newline +
+								"Fizz" + newline +
+								"43" + newline +
+								"44" + newline +
+								"FizzBuzz" + newline +
+								"46" + newline +
+								"47" + newline +
+								"Fizz" + newline +
+								"49" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"52" + newline +
+								"53" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline +
+								"56" + newline +
+								"Fizz" + newline +
+								"58" + newline +
+								"59" + newline +
+								"FizzBuzz" + newline +
+								"61" + newline +
+								"62" + newline +
+								"Fizz" + newline +
+								"64" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"67" + newline +
+								"68" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline +
+								"71" + newline +
+								"Fizz" + newline +
+								"73" + newline +
+								"74" + newline +
+								"FizzBuzz" + newline +
+								"76" + newline +
+								"77" + newline +
+								"Fizz" + newline +
+								"79" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"82" + newline +
+								"83" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline +
+								"86" + newline +
+								"Fizz" + newline +
+								"88" + newline +
+								"89" + newline +
+								"FizzBuzz" + newline +
+								"91" + newline +
+								"92" + newline +
+								"Fizz" + newline +
+								"94" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"97" + newline +
+								"98" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline;
 		String expectedErr = "";
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
@@ -137,25 +138,25 @@ public class BuzzerTest {
 	public void print7to25FizzBuzz() {	
 		String[] args = {"7","25"};
 		Buzzer.main(args);
-		String expectedOut = 	"7" + System.lineSeparator() +
-								"8" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"11" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"13" + System.lineSeparator() +
-								"14" + System.lineSeparator() +
-								"FizzBuzz" + System.lineSeparator() +
-								"16" + System.lineSeparator() +
-								"17" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"19" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"22" + System.lineSeparator() +
-								"23" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator();
+		String expectedOut = 	"7" + newline +
+								"8" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline +
+								"11" + newline +
+								"Fizz" + newline +
+								"13" + newline +
+								"14" + newline +
+								"FizzBuzz" + newline +
+								"16" + newline +
+								"17" + newline +
+								"Fizz" + newline +
+								"19" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"22" + newline +
+								"23" + newline +
+								"Fizz" + newline +
+								"Buzz" + newline;
 		String expectedErr = "";
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
@@ -165,14 +166,14 @@ public class BuzzerTest {
 	public void print77to84FizzBuzz() {	
 		String[] args = {"77","84"};
 		Buzzer.main(args);
-		String expectedOut = 	"77" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"79" + System.lineSeparator() +
-								"Buzz" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator() +
-								"82" + System.lineSeparator() +
-								"83" + System.lineSeparator() +
-								"Fizz" + System.lineSeparator();
+		String expectedOut = 	"77" + newline +
+								"Fizz" + newline +
+								"79" + newline +
+								"Buzz" + newline +
+								"Fizz" + newline +
+								"82" + newline +
+								"83" + newline +
+								"Fizz" + newline;
 		String expectedErr = "";
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
@@ -182,7 +183,7 @@ public class BuzzerTest {
 	public void print3to3FizzBuzz() {	
 		String[] args = {"3","3"};
 		Buzzer.main(args);
-		String expectedOut = 	"Fizz" + System.lineSeparator();
+		String expectedOut = 	"Fizz" + newline;
 		String expectedErr = "";
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
@@ -192,7 +193,7 @@ public class BuzzerTest {
 	public void print30to30FizzBuzz() {	
 		String[] args = {"3","3"};
 		Buzzer.main(args);
-		String expectedOut = 	"FizzBuzz" + System.lineSeparator();
+		String expectedOut = 	"FizzBuzz" + newline;
 		String expectedErr = "";
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
@@ -202,7 +203,7 @@ public class BuzzerTest {
 	public void print19to19FizzBuzz() {	
 		String[] args = {"3","3"};
 		Buzzer.main(args);
-		String expectedOut = 	"19" + System.lineSeparator();
+		String expectedOut = 	"19" + newline;
 		String expectedErr = "";
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
