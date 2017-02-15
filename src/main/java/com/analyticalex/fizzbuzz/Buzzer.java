@@ -5,6 +5,7 @@ public class Buzzer {
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
+		printFizzBuzz(1, 100);
 	}
 	
 	/**
@@ -23,7 +24,36 @@ public class Buzzer {
 	 */
 	private static void printFizzBuzz(int startVal, int endVal)
 	{
-		// TODO
+		for (int i = startVal; i < endVal+1; i++)
+		{
+			String nxt = "";
+			Boolean xthree = false;
+			Boolean xfive = false;
+			
+			// Check if integer divisible by 3
+			if (i % 3 == 0)
+			{
+				nxt += "Fizz";
+				xthree = true;
+			}
+			
+			// Check if integer divisible by 5
+			if (i % 5 == 0)
+			{
+				nxt += "Buzz";
+				xfive = true;
+			}
+			
+			// If integer divisible by 3, 5, or both, print text instead
+			if (xthree || xfive)
+			{
+				System.out.println(nxt);
+			}
+			else
+			{
+				System.out.println(i);
+			}
+		}
 	}
 
 }
