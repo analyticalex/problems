@@ -4,8 +4,46 @@ public class Buzzer {
 
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
-		printFizzBuzz(1, 100);
+		// Default values
+		int startVal = 1;
+		int endVal = 100;
+
+		// Validate input
+		
+		// Check: zero or two arguments
+		if (args.length != 0 && args.length != 2) 
+		{
+			System.err.println("Error: provide startVal and endVal, or omit arguments to default to 1 and 100.");
+			return;
+		}
+		
+		if (args.length == 2)
+		{
+			// Check: arguments are integers
+			try { 
+		        startVal = Integer.parseInt(args[0]); 
+		        endVal = Integer.parseInt(args[1]);
+		    } catch(NumberFormatException e) { 
+		    	System.err.println("Error: startVal and endVal must be integers.");
+				return;
+		    }
+			
+			// Check: arguments must be positive
+			if (startVal <= 0 || endVal <= 0)
+			{
+				System.err.println("Error: startVal and endVal must be positive.");
+				return;
+			}
+			
+			// Check: startVal must be less than or equal to endVal
+			if (startVal > endVal)
+			{
+				System.err.println("Error: startVal must be less than or equal to endVal.");
+				return;
+			}
+		}
+
+		printFizzBuzz(startVal, endVal);
 	}
 	
 	/**
