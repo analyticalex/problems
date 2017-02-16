@@ -208,26 +208,6 @@ public class BuzzerTest {
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
-	
-	@Test
-	public void printErrorStartValGreaterThanEndVal() {	
-		String[] args = {"35","20"};
-		Buzzer.main(args);
-		String expectedOut = "";
-		String expectedErr = "Error: startVal must be less than or equal to endVal." + newline;
-		assertEquals(expectedOut, outContent.toString());
-		assertEquals(expectedErr, errContent.toString());
-	}
-
-	@Test
-	public void printErrorStartValNegative() {	
-		String[] args = {"-2","10"};
-		Buzzer.main(args);
-		String expectedOut = "";
-		String expectedErr = "Error: startVal and endVal must be positive." + newline;
-		assertEquals(expectedOut, outContent.toString());
-		assertEquals(expectedErr, errContent.toString());
-	}
 
 	@Test
 	public void printErrorOneIntArg() {	
@@ -250,6 +230,16 @@ public class BuzzerTest {
 	}
 
 	@Test
+	public void printErrorThreeNonIntArgs() {	
+		String[] args = {"true","text","string"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: provide startVal and endVal, or omit arguments to default to 1 and 100." + newline;
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
 	public void printErrorNonIntArgs() {	
 		String[] args = {"text","string"};
 		Buzzer.main(args);
@@ -260,11 +250,21 @@ public class BuzzerTest {
 	}
 
 	@Test
-	public void printErrorThreeNonIntArgs() {	
-		String[] args = {"true","text","string"};
+	public void printErrorStartValNegative() {	
+		String[] args = {"-2","10"};
 		Buzzer.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: startVal and endVal must be integers." + newline;
+		String expectedErr = "Error: startVal and endVal must be positive." + newline;
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+
+	@Test
+	public void printErrorStartValGreaterThanEndVal() {	
+		String[] args = {"35","20"};
+		Buzzer.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: startVal must be less than or equal to endVal." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
