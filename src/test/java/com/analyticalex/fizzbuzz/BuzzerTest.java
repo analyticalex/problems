@@ -27,7 +27,7 @@ public class BuzzerTest {
 
 	@Test
 	public void printFullFizzBuzz() {	
-		String[] args = null;
+		String[] args = {};
 		Buzzer.main(args);	
 		String expectedOut = 	"1" + newline +
 								"2" + newline +
@@ -191,7 +191,7 @@ public class BuzzerTest {
 
 	@Test
 	public void print30to30FizzBuzz() {	
-		String[] args = {"3","3"};
+		String[] args = {"30","30"};
 		Buzzer.main(args);
 		String expectedOut = 	"FizzBuzz" + newline;
 		String expectedErr = "";
@@ -201,7 +201,7 @@ public class BuzzerTest {
 	
 	@Test
 	public void print19to19FizzBuzz() {	
-		String[] args = {"3","3"};
+		String[] args = {"19","19"};
 		Buzzer.main(args);
 		String expectedOut = 	"19" + newline;
 		String expectedErr = "";
@@ -214,7 +214,7 @@ public class BuzzerTest {
 		String[] args = {"35","20"};
 		Buzzer.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: startVal must be less than or equal to endVal.";
+		String expectedErr = "Error: startVal must be less than or equal to endVal." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
@@ -224,7 +224,7 @@ public class BuzzerTest {
 		String[] args = {"-2","10"};
 		Buzzer.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: startVal must be positive.";
+		String expectedErr = "Error: startVal and endVal must be positive." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
@@ -234,7 +234,7 @@ public class BuzzerTest {
 		String[] args = {"30"};
 		Buzzer.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: provide both startVal and endVal, or omit arguments to default to 1 and 100.";
+		String expectedErr = "Error: provide startVal and endVal, or omit arguments to default to 1 and 100." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
@@ -244,7 +244,7 @@ public class BuzzerTest {
 		String[] args = {"30","40","101"};
 		Buzzer.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: provide only startVal and endVal, or omit arguments to default to 1 and 100.";
+		String expectedErr = "Error: provide startVal and endVal, or omit arguments to default to 1 and 100." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
@@ -254,7 +254,7 @@ public class BuzzerTest {
 		String[] args = {"text","string"};
 		Buzzer.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: startVal and endVal must be integers.";
+		String expectedErr = "Error: startVal and endVal must be integers." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
@@ -264,7 +264,7 @@ public class BuzzerTest {
 		String[] args = {"true","text","string"};
 		Buzzer.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: startVal and endVal must be integers.";
+		String expectedErr = "Error: startVal and endVal must be integers." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
