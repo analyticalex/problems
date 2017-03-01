@@ -81,12 +81,45 @@ public class PostFixItTest {
 	}
 	
 	@Test
+	public void testValidInput05()
+	{
+		String[] args = {"( (2-  9)*4)	+( 66 /3       )-( ((5)))"};
+		PostFixIt.main(args);
+		String expectedOut = "2 9 - 4 * 66 3 / + 5 -" + newline;
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void testValidInput06()
+	{
+		String[] args = {"684"};
+		PostFixIt.main(args);
+		String expectedOut = "684" + newline;
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void testValidInput07()
+	{
+		String[] args = {"1000/ 10"};
+		PostFixIt.main(args);
+		String expectedOut = "1000 10 /" + newline;
+		String expectedErr = "";
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
 	public void testNoArgs()
 	{
 		String[] args = {};
 		PostFixIt.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: Invalid input. Please provide one argument, an arithmetic string in valid postfix notation." + newline;
+		String expectedErr = "Error: Invalid input. Please provide one argument, an arithmetic string in valid infix notation." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
@@ -97,7 +130,7 @@ public class PostFixItTest {
 		String[] args = {" 3  + ", "4 / 2"};
 		PostFixIt.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: Invalid input. Please provide one argument, an arithmetic string in valid postfix notation." + newline;
+		String expectedErr = "Error: Invalid input. Please provide one argument, an arithmetic string in valid infix notation." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
@@ -108,7 +141,62 @@ public class PostFixItTest {
 		String[] args = {"5 + "};
 		PostFixIt.main(args);
 		String expectedOut = "";
-		String expectedErr = "Error: Invalid input. Please provide one argument, an arithmetic string in valid postfix notation." + newline;
+		String expectedErr = "Error: Invalid input. Arithmetic string in not in valid infix notation." + newline;
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void testInvalidInput02()
+	{
+		String[] args = {"(5 + "};
+		PostFixIt.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: Invalid input. Arithmetic string in not in valid infix notation." + newline;
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void testInvalidInput03()
+	{
+		String[] args = {"(5 + 4"};
+		PostFixIt.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: Invalid input. Arithmetic string in not in valid infix notation." + newline;
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void testInvalidInput04()
+	{
+		String[] args = {"(5 + 4))"};
+		PostFixIt.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: Invalid input. Arithmetic string in not in valid infix notation." + newline;
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void testInvalidInput05()
+	{
+		String[] args = {"( (89/4 /2)*(9 - 3)"};
+		PostFixIt.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: Invalid input. Arithmetic string in not in valid infix notation." + newline;
+		assertEquals(expectedOut, outContent.toString());
+		assertEquals(expectedErr, errContent.toString());
+	}
+	
+	@Test
+	public void testInvalidInput06()
+	{
+		String[] args = {"74   3"};
+		PostFixIt.main(args);
+		String expectedOut = "";
+		String expectedErr = "Error: Invalid input. Arithmetic string in not in valid infix notation." + newline;
 		assertEquals(expectedOut, outContent.toString());
 		assertEquals(expectedErr, errContent.toString());
 	}
