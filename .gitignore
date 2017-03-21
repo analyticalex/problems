@@ -18,6 +18,7 @@ hs_err_pid*
 
 # Generated files
 .README.md.html
+.metadata/
 
 # Practice files
 src/main/java/com/analyticalex/datastructures/
